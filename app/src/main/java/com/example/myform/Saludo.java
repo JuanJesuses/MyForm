@@ -15,12 +15,13 @@ public class Saludo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_saludo);
 
-        //Activar flecha ir atrás
+        //Activar flecha ir atrás y el icono de la app en la actionBar
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_myicon_round);
 
         //Declaramos la barra de desplaamiento
         SeekBar seekBar = findViewById(R.id.barraEdad);
-        seekBar.setProgress(0);
+        seekBar.setProgress(16);
         seekBar.setMax(100);
 
         //Delcaramos el TextView numérico para la barra de desplazamiento

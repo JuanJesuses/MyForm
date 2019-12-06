@@ -16,6 +16,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Forzar y cargar icono en el Action Bar
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_myicon_round);
+
         boton = findViewById(R.id.botonSiguiente);
 
         boton.setOnClickListener(new View.OnClickListener() {
@@ -26,9 +30,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //Forzar y cargar icono en el Action Bar
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.mipmap.ic_myicon_round);
+
 
     }
 }
