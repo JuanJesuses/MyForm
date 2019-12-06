@@ -26,13 +26,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
         //Forzar y cargar icono en el Action Bar
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.mipmap.ic_myicon_round);
-
-
 
     }
 }
