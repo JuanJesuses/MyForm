@@ -3,7 +3,10 @@ package com.example.myform;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -19,7 +22,9 @@ public class Saludo extends AppCompatActivity {
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setIcon(R.mipmap.ic_myicon_round);
 
-        //Declaramos la barra de desplaamiento
+        Button botonSiguiente = findViewById(R.id.botonSiguienteSaludo);
+
+        //Declaramos la barra de desplazamiento
         SeekBar seekBar = findViewById(R.id.barraEdad);
         seekBar.setProgress(16);
         seekBar.setMax(100);
@@ -41,6 +46,14 @@ public class Saludo extends AppCompatActivity {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
 
+            }
+        });
+
+        botonSiguiente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Saludo.this, comparticion.class);
+                startActivity(i);
             }
         });
 
